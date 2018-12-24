@@ -2,7 +2,7 @@
 
 return [
     'enabled'     => true,
-    'controller'  => Railken\Amethyst\Http\Controllers\Admin\MangasController::class,
+    'controller'  => Railken\Amethyst\Http\Controllers\Admin\MangaController::class,
     'router'      => [
         'as'        => 'manga.',
         'prefix'    => '/manga',
