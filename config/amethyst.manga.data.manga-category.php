@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'table'      => 'amethyst_manga_categories'
+    'table'      => 'amethyst_manga_categories',
 ];
