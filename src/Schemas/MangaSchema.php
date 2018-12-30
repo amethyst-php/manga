@@ -17,8 +17,7 @@ class MangaSchema extends Schema
         return [
             Attributes\IdAttribute::make(),
             Attributes\TextAttribute::make('name')
-                ->setRequired(true)
-                ->setUnique(true),
+                ->setRequired(true),
             Attributes\LongTextAttribute::make('description'),
             Attributes\EnumAttribute::make('status', ['ongoing', 'completed']),
             Attributes\CreatedAtAttribute::make(),

@@ -14,7 +14,7 @@ class CreateMangasTable extends Migration
     {
         Schema::create(Config::get('amethyst.manga.data.manga.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->text('description')->nullable();
             $table->string('status')->default('ongoing');
             $table->timestamps();
