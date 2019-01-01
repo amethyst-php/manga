@@ -18,8 +18,6 @@ class CreateMangasTable extends Migration
             $table->text('description')->nullable();
             $table->string('slug')->nullable();
             $table->string('status')->default('ongoing');
-            $table->integer('source_id')->unsigned();
-            $table->foreign('source_id')->references('id')->on(Config::get('amethyst.source.data.source.table'))->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

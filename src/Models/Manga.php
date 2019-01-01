@@ -35,10 +35,10 @@ class Manga extends Model implements EntityContract
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * Get all of the manga sources.
      */
-    public function source()
+    public function sources()
     {
-        return $this->belongsTo(Source::class);
+        return $this->morphMany(Source::class, 'sourceable');
     }
 }
