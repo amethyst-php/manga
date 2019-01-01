@@ -9,6 +9,6 @@ return [
     'serializer' => Railken\Amethyst\Serializers\MangaSerializer::class,
     'validator'  => Railken\Amethyst\Validators\MangaValidator::class,
     'authorizer' => Railken\Amethyst\Authorizers\MangaAuthorizer::class,
-    'faker'      => Railken\Amethyst\Authorizers\MangaFaker::class,
-    'manager'    => Railken\Amethyst\Authorizers\MangaManager::class,
+    'faker'      => Railken\Amethyst\Fakers\MangaFaker::class,
+    'manager'    => Railken\Amethyst\Managers\MangaManager::class,
 ];
