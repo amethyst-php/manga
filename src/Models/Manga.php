@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Config;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
 
+/**
+ * @property string $name
+ */
 class Manga extends Model implements EntityContract
 {
     use SoftDeletes, ConfigurableModel;
