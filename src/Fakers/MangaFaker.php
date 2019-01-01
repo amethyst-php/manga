@@ -18,6 +18,7 @@ class MangaFaker extends Faker
         $bag = new Bag();
         $bag->set('name', $faker->name);
         $bag->set('description', $faker->text);
+        $bag->set('source', SourceFaker::make()->parameters()->toArray());
 
         return $bag;
     }

@@ -18,6 +18,7 @@ class MangaServiceProvider extends CommonServiceProvider
 
         $this->loadExtraRoutes();
         $this->app->register(\Railken\Amethyst\Providers\CategoryServiceProvider::class);
+        $this->app->register(\Railken\Amethyst\Providers\SourceServiceProvider::class);
     }
 
     /**

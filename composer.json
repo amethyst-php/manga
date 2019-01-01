@@ -6,7 +6,8 @@
     "require": {
         "php": ">=7.1",
         "railken/amethyst-common": "0.1.*",
-        "railken/amethyst-category": "0.1.*"
+        "railken/amethyst-category": "0.1.*",
+        "railken/amethyst-source": "0.1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
@@ -22,6 +23,7 @@
             "Railken\\Amethyst\\Tests\\": "tests/" 
         }
     },
+    "cache-files-ttl": 0,
     "extra": {
         "amethyst": {
             "package": "manga",
