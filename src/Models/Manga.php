@@ -41,4 +41,12 @@ class Manga extends Model implements EntityContract
     {
         return $this->morphMany(Source::class, 'sourceable');
     }
+
+    /**
+     * Get all of the manga aliases.
+     */
+    public function aliases()
+    {
+        return $this->morphMany(Alias::class, 'aliasable');
+    }
 }

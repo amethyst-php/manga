@@ -19,8 +19,15 @@ class MangaServiceProvider extends CommonServiceProvider
         $this->loadExtraRoutes();
         $this->app->register(\Railken\Amethyst\Providers\CategoryServiceProvider::class);
         $this->app->register(\Railken\Amethyst\Providers\SourceServiceProvider::class);
+        $this->app->register(\Railken\Amethyst\Providers\AliasServiceProvider::class);
 
         $configKey = 'amethyst.source.data.source.sourceables';
+
+        Config::set($configKey, array_merge(Config::get($configKey), [
+            \Railken\Amethyst\Models\Manga::class => \Railken\Amethyst\Managers\MangaManager::class,
+        ]));
+
+        $configKey = 'amethyst.alias.data.alias.aliasables';
 
         Config::set($configKey, array_merge(Config::get($configKey), [
             \Railken\Amethyst\Models\Manga::class => \Railken\Amethyst\Managers\MangaManager::class,
