@@ -19,8 +19,8 @@ class MangaServiceProvider extends CommonServiceProvider
         $this->app->register(\Railken\Amethyst\Providers\SourceServiceProvider::class);
         $this->app->register(\Railken\Amethyst\Providers\AliasServiceProvider::class);
 
-        Config::set('amethyst.source.data.source.sourceables'.Manga::class, MangaManager::class);
-        Config::set('amethyst.alias.data.alias.aliasables'.Manga::class, MangaManager::class);
-        Config::set('amethyst.tag.data.tag-entity.taggables'.Manga::class, MangaManager::class);
+        Config::set('amethyst.source.data.source.sourceables.'.Manga::class, MangaManager::class);
+        Config::set('amethyst.alias.data.alias.aliasables.'.Manga::class, MangaManager::class);
+        Config::set('amethyst.tag.data.tag-entity.taggables.'.Manga::class, MangaManager::class);
     }
 }
