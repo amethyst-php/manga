@@ -26,7 +26,7 @@ class MangaSchema extends Schema
 
                 return $slugify->slugify($entity->name);
             }),
-            Attributes\EnumAttribute::make('status', ['ongoing', 'completed']),
+            Attributes\EnumAttribute::make('status', ['ongoing', 'completed', 'cancelled', 'hiatus']),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
