@@ -6,7 +6,7 @@
     "require": {
         "php": ">=7.1",
         "railken/amethyst-common": "0.1.*",
-        "railken/amethyst-category": "0.1.*",
+        "railken/amethyst-tag": "0.1.*",
         "railken/amethyst-source": "0.1.*",
         "railken/amethyst-alias": "0.1.*",
         "cocur/slugify": "^3.1"

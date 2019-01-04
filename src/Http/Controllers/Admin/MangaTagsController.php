@@ -4,11 +4,11 @@ namespace Railken\Amethyst\Http\Controllers\Admin;
 
 use Railken\Amethyst\Api\Http\Controllers\RestManagerController;
 use Railken\Amethyst\Api\Http\Controllers\Traits;
-use Railken\Amethyst\Managers\CategoryManager;
 use Railken\Amethyst\Managers\MangaManager;
+use Railken\Amethyst\Managers\TagManager;
 use Railken\Lem\Contracts\EntityContract;
 
-class MangaCategoriesController extends RestManagerController
+class MangaTagsController extends RestManagerController
 {
     use Traits\RestManyIndexTrait;
     use Traits\RestAttachTrait;
@@ -30,7 +30,7 @@ class MangaCategoriesController extends RestManagerController
      */
     public function getRelationRoute(EntityContract $entity)
     {
-        return 'admin.category.index';
+        return 'admin.tag.index';
     }
 
     /**
@@ -42,7 +42,7 @@ class MangaCategoriesController extends RestManagerController
      */
     public function getRelationName(EntityContract $entity)
     {
-        return 'categories';
+        return 'tags';
     }
 
     /**
@@ -54,6 +54,6 @@ class MangaCategoriesController extends RestManagerController
      */
     public function getRelationManager(EntityContract $entity)
     {
-        return new CategoryManager($this->getUser());
+        return new TagManager($this->getUser());
     }
 }

@@ -29,9 +29,9 @@ class Manga extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function categories()
+    public function tags()
     {
-        return $this->belongsToMany(Category::class, Config::get('amethyst.manga.data.manga-category.table'), 'manga_id', 'category_id');
+        return $this->belongsToMany(Tag::class, Config::get('amethyst.manga.data.manga-tag.table'), 'manga_id', 'tag_id');
     }
 
     /**
