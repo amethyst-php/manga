@@ -3,6 +3,10 @@
 namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Config;
 use Railken\Amethyst\Common\ConfigurableModel;
@@ -29,7 +33,7 @@ class Manga extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function tags()
+    public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class, Config::get('amethyst.manga.data.manga-tag.table'), 'manga_id', 'tag_id');
     }
@@ -45,7 +49,7 @@ class Manga extends Model implements EntityContract
     /**
      * Get all of the manga aliases.
      */
-    public function aliases()
+    public function aliases(): MorphMany
     {
         return $this->morphMany(Alias::class, 'aliasable');
     }
