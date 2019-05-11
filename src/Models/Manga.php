@@ -33,7 +33,7 @@ class Manga extends Model implements EntityContract
      */
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class, Config::get('amethyst.manga.data.manga-tag.table'), 'manga_id', 'tag_id');
+        return $this->belongsToMany(config('amethyst.tag.data.tag.model'), Config::get('amethyst.manga.data.manga-tag.table'), 'manga_id', 'tag_id');
     }
 
     /**
@@ -41,7 +41,7 @@ class Manga extends Model implements EntityContract
      */
     public function sources()
     {
-        return $this->morphMany(Source::class, 'sourceable');
+        return $this->morphMany(config('amethyst.source.data.source.model'), 'sourceable');
     }
 
     /**
@@ -49,6 +49,6 @@ class Manga extends Model implements EntityContract
      */
     public function aliases(): MorphMany
     {
-        return $this->morphMany(Alias::class, 'aliasable');
+        return $this->morphMany(config('amethyst.alias.data.alias.model'), 'aliasable');
     }
 }
