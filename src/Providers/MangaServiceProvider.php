@@ -1,11 +1,11 @@
 <?php
 
-namespace Railken\Amethyst\Providers;
+namespace Amethyst\Providers;
 
 use Illuminate\Support\Facades\Config;
-use Railken\Amethyst\Common\CommonServiceProvider;
-use Railken\Amethyst\Managers\MangaManager;
-use Railken\Amethyst\Models\Manga;
+use Amethyst\Common\CommonServiceProvider;
+use Amethyst\Managers\MangaManager;
+use Amethyst\Models\Manga;
 
 class MangaServiceProvider extends CommonServiceProvider
 {
@@ -15,9 +15,9 @@ class MangaServiceProvider extends CommonServiceProvider
     public function register()
     {
         parent::register();
-        $this->app->register(\Railken\Amethyst\Providers\TagServiceProvider::class);
-        $this->app->register(\Railken\Amethyst\Providers\SourceServiceProvider::class);
-        $this->app->register(\Railken\Amethyst\Providers\AliasServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\TagServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\SourceServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\AliasServiceProvider::class);
 
         Config::set('amethyst.source.data.source.sourceables.'.Manga::class, MangaManager::class);
         Config::set('amethyst.alias.data.alias.aliasables.'.Manga::class, MangaManager::class);

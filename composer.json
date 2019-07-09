@@ -1,14 +1,14 @@
 {
-    "name": "railken/amethyst-manga",
+    "name": "amethyst/manga",
     "type": "library",
     "keywords": ["laravel", "amethyst", "amethyst-manga", "manga"],
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "railken/amethyst-common": "0.1.*",
-        "railken/amethyst-tag": "0.1.*",
-        "railken/amethyst-source": "0.1.*",
-        "railken/amethyst-alias": "0.1.*",
+        "amethyst/common": "0.1.*",
+        "amethyst/tag": "0.1.*",
+        "amethyst/source": "0.1.*",
+        "amethyst/alias": "0.1.*",
         "cocur/slugify": "^3.1"
     },
     "require-dev": {
@@ -17,12 +17,12 @@
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\Amethyst\\" : "src/"
+            "Amethyst\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\Amethyst\\Tests\\": "tests/" 
+            "Amethyst\\Tests\\": "tests/" 
         }
     },
     "cache-files-ttl": 0,
@@ -33,7 +33,7 @@
         },
         "laravel": {
             "providers": [
-                "Railken\\Amethyst\\Providers\\MangaServiceProvider"
+                "Amethyst\\Providers\\MangaServiceProvider"
             ]
         }
     }

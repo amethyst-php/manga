@@ -1,9 +1,9 @@
 <?php
 
-namespace Railken\Amethyst\Schemas;
+namespace Amethyst\Schemas;
 
 use Cocur\Slugify\Slugify;
-use Railken\Amethyst\Models\Manga;
+use Amethyst\Models\Manga;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
