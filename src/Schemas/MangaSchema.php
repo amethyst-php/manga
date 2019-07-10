@@ -2,8 +2,8 @@
 
 namespace Amethyst\Schemas;
 
-use Cocur\Slugify\Slugify;
 use Amethyst\Models\Manga;
+use Cocur\Slugify\Slugify;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 

@@ -2,10 +2,10 @@
 
 namespace Amethyst\Providers;
 
-use Illuminate\Support\Facades\Config;
 use Amethyst\Common\CommonServiceProvider;
 use Amethyst\Managers\MangaManager;
 use Amethyst\Models\Manga;
+use Illuminate\Support\Facades\Config;
 
 class MangaServiceProvider extends CommonServiceProvider
 {
