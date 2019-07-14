@@ -6,7 +6,6 @@
     "require": {
         "php": ">=7.1",
         "amethyst/common": "0.1.*",
-        "amethyst/tag": "0.1.*",
         "amethyst/source": "0.1.*",
         "amethyst/alias": "0.1.*",
         "cocur/slugify": "^3.1"
@@ -25,7 +24,6 @@
             "Amethyst\\Tests\\": "tests/" 
         }
     },
-    "cache-files-ttl": 0,
     "extra": {
         "amethyst": {
             "package": "manga",

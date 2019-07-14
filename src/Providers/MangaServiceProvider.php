@@ -15,7 +15,6 @@ class MangaServiceProvider extends CommonServiceProvider
     public function register()
     {
         parent::register();
-        $this->app->register(\Amethyst\Providers\TagServiceProvider::class);
         $this->app->register(\Amethyst\Providers\SourceServiceProvider::class);
         $this->app->register(\Amethyst\Providers\AliasServiceProvider::class);
 
