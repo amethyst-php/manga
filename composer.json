@@ -4,15 +4,15 @@
     "keywords": ["laravel", "amethyst", "amethyst-manga", "manga"],
     "license": "MIT",
     "require": {
-        "php": ">=7.1",
-        "amethyst/common": "0.1.*",
-        "amethyst/source": "0.1.*",
-        "amethyst/alias": "0.1.*",
+        "php": ">=7.2",
+        "amethyst/core": "0.2.*",
+        "amethyst/source": "0.2.*",
+        "amethyst/alias": "0.2.*",
         "cocur/slugify": "^3.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "~7.1",
-        "orchestra/testbench": "3.*"
+        "phpunit/phpunit": "*",
+        "orchestra/testbench": "*"
     },
     "autoload": {
         "psr-4" : {
